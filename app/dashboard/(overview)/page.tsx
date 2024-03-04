@@ -2,11 +2,19 @@ import { CardSkeleton, LatestInvoicesSkeleton } from '@/app/ui/skeletons';
 import CardWrapper, { Card } from '@/app/ui/dashboard/cards';
 
 import LatestInvoices from '@/app/ui/dashboard/latest-invoices';
+import { Metadata } from 'next';
 import RevenueChart from '@/app/ui/dashboard/revenue-chart';
 import { RevenueChartSkeleton } from '@/app/ui/skeletons';
 import { Suspense } from 'react';
 import { fetchCardData } from '@/app/lib/data';
 import { lusitana } from '@/app/ui/fonts';
+
+export const metadata: Metadata = {
+  title: 'Dashboard',
+
+  description: 'The official Next.js Learn Dashboard built with App Router.',
+  metadataBase: new URL('https://next-learn-dashboard.vercel.sh'),
+};
 
 export default async function Page() {
   return (
